@@ -1,13 +1,21 @@
 $color-primary: rgba(245, 0, 87,1);
 .header{
+    position: fixed;
+    top: 0px;;
     display: grid;
     height: 100px;
-    grid-template-columns: 200px auto 200px;
+    width: 100vw;
+    grid-template-columns: 300px auto 200px;
     grid-template-rows: 100px;
     padding: 0px 50px;
     background-color: rgba(255, 255, 255, 0);
+    z-index: 99;
     .home-button{
-
+        display: grid;
+        align-items: center;
+        svg{
+            width: 300px
+        }
     }
     .panel{
         display: grid;
@@ -16,11 +24,24 @@ $color-primary: rgba(245, 0, 87,1);
         .hamburger{
             height: 40px;
             width: 40px;
+            &.hide{
+                .hamburger-menu{
+                    transform: translateX(100%);
+                    transition-duration: 0.2s;
+                    .open{
+                        display: none;
+                    }
+                }
+                .close{
+                    display: none;
+                }
+            }
             &-icon{
                 display: grid;
                 align-content: center;
                 justify-content: right;
                 height: 100%;
+                z-index: 101;
                 svg{
                     height: 40px;
                     width: 40px;
@@ -36,11 +57,17 @@ $color-primary: rgba(245, 0, 87,1);
                 background-color: $color-primary;
                 color: white;
                 z-index: 100;
-                &.hide{
-                    transform: translateX(100%);
+                transition-duration: 0.2s;
+                svg.close {
+                    float: right;
+                    margin-right: 10px;
+                    height: 25px;
+                    width: 25px;
+                    fill: #ffffff
                 }
                 ul{
                     margin: 0;
+                    margin-top: 60px;
                     list-style-type: none;
                     li{
                         display: block;

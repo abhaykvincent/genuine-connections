@@ -21,37 +21,36 @@ export default function App() {
   return (
     <div className="App">
       <Router>
-                <div>
         <Header/>
+        <div className="page">
+          <Switch>
+            <Route exact path="/">
+              <Splash/>
+            </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
 
-        <Switch>
-          <Route exact path="/">
-            <Splash/>
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
+            <Route path="/connection/new">
+              <NewConnection />
+            </Route>
+            <Route path="/contact/new">
+              <NewContact />
+            </Route>
 
-          <Route path="/connection/new">
-            <NewConnection />
-          </Route>
-          <Route path="/contact/new">
-            <NewContact />
-          </Route>
+            <Route path="/settings">
+              <Settings />
+            </Route>
 
-          <Route path="/settings">
-            <Settings />
-          </Route>
-
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/signup">
-            <Signup />
-          </Route>
-        </Switch>
-      </div>
-    </Router>   
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/signup">
+              <Signup />
+            </Route>
+          </Switch>
+        </div>
+      </Router>   
     </div>
     
   );
