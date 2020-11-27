@@ -1,0 +1,32 @@
+$color-primary: rgba(245, 0, 87,1);
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+a{
+  color: inherit;
+}
+body{
+  margin: 0;
+  background-color: #FAF5F5;
+}
+.button{
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  margin: 0px auto;
+  border-radius: 20px;
+  margin-top: 20px;
+  &.primary{
+    background-color: $color-primary;
+    color: white;
+  }
+  &.center{
+    text-align: center;
+  }
+}
+
+.App{
+  font-family: 'Product Sans';
+}
