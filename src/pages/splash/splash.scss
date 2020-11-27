@@ -1,0 +1,78 @@
+.splash{
+    .tl-rb{
+        clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 81%);
+        background-color: rgba(237,144,177,0.3);
+        text-align: right;
+        .content{
+            float: right;
+        }
+        
+    }
+    .lb-tr{
+        clip-path: polygon(0% 20%, 0% 100%, 100% 80%, 100% 0%);
+        background-color: rgba(237,144,177,0.1);
+    }
+    &-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 30vh;
+        grid-gap: 50px;
+        align-items: center;
+        min-height: 50vh;
+        width: 100vw;
+        margin-top: -100px;
+        padding: 200px 10%;
+        align-content: center;
+        background-color: rgba(237,144,177,0.2);
+    }
+    &-splash{
+        .image-panel{
+            height: 50vh;
+            background-image: url('../../images/spslas-splash_bg.svg');
+            background-position: center;
+        }
+    }
+    &-two{
+        .image-panel{
+            height: 50vh;
+            background-image: url('../../images/splash-second_having-fun.svg');
+        }
+    }
+    &-three{
+        .image-panel{
+            height: 50vh;
+            background-image: url('../../images/online-friends.svg');
+        }
+    }
+    &-cta{
+        display:grid;
+        padding: 200px 20%;
+        margin-top: -100px;
+        text-align: center;
+        .image-panel{
+            height: 20vmax;
+            margin-bottom: 20px;
+            background-image: url('../../images/growth-analysis.svg');
+            background-position: center center;
+            background-size:auto 100% !important;
+        }
+        .content{
+            width: 100% !important;
+            padding: 0px 10vw;
+        }
+    }
+    .image-panel{
+        background-size:  80% auto;
+        background-repeat: no-repeat;
+        background-position: center ;
+    }
+    .content-panel{
+        .content{
+            width: 80%;
+            text-align: center;
+            .list{
+                margin-top: 20px;
+            }
+        }
+    }
+}
