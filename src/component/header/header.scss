@@ -25,6 +25,12 @@ $color-primary: rgba(245, 0, 87,1);
             height: 40px;
             width: 40px;
             &.hide{
+                .menu-block{
+                    transform: translateX(100%);
+                    background-color: rgba(0, 0, 0, 0.4);
+                    transition-duration: 0.2s;
+                    transition-delay: 0.1s;
+                }
                 .hamburger-menu{
                     transform: translateX(100%);
                     transition-duration: 0.2s;
@@ -53,11 +59,12 @@ $color-primary: rgba(245, 0, 87,1);
                 top: 0px;
                 right: 0px;
                 height: 100vh;
-                padding: 20px 10px;
+                padding: 20px 30px;
                 background-color: $color-primary;
                 color: white;
                 z-index: 100;
                 transition-duration: 0.2s;
+                
                 svg.close {
                     float: right;
                     margin-right: 10px;
@@ -74,6 +81,17 @@ $color-primary: rgba(245, 0, 87,1);
                         padding:10px;
                     }
                 }
+            }
+            .menu-block{
+                position: fixed;
+                top:0px;
+                left:0px;
+                content:'';
+                width: 100vw;
+                height:100vh;
+                background-color: rgba(0, 0, 0, 0.8);
+                transition-duration: 0.2s;
+                transition-delay: 0.1s;
             }
         }
     }
