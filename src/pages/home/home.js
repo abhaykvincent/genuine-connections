@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ContactCompact from '../../component/contacts/contact-compact/contact-compact'
+import ContactCompact from '../../component/contacts/contact-compact'
 import './home.scss'
 export default class home extends Component {
     render() {
