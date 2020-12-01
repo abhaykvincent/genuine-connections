@@ -8,6 +8,7 @@ export default class ContactCompact extends Component {
                 <div className="contact-name">Abhay Vincent</div>
                 <div className="contact-option">
                     <div className="option-icon">:</div>
+                    <div className="option-list"></div>
                 </div>
             </div>
         )
