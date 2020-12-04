@@ -26,14 +26,16 @@ $color-primary: rgba(245, 0, 87,1);
             width: 40px;
             &.hide{
                 .menu-block{
-                    transform: translateX(100%);
+                    transform: translateX(0%);
+                    opacity: 0;
                     background-color: rgba(0, 0, 0, 0.4);
-                    transition-duration: 0.2s;
+                    transition-duration: 0.1s;
                     transition-delay: 0.1s;
                 }
                 .hamburger-menu{
                     transform: translateX(100%);
                     transition-duration: 0.2s;
+                    opacity: 0.8;
                     .open{
                         display: none;
                     }
@@ -92,6 +94,7 @@ $color-primary: rgba(245, 0, 87,1);
                 background-color: rgba(0, 0, 0, 0.8);
                 transition-duration: 0.2s;
                 transition-delay: 0.1s;
+                opacity: 1;
             }
         }
     }

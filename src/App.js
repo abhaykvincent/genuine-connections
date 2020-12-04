@@ -7,6 +7,7 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 import './App.scss'
 
@@ -19,40 +20,41 @@ import Signup from './pages/signup/signup'
 
 export default function App() {
   return (
-    <div className="App">
-      <Router>
-        <Header/>
-        <div className="page">
-          <Switch>
-            <Route exact path="/">
-              <Splash/>
-            </Route>
-            <Route path="/home">
-              <Home />
-            </Route>
+    <ParallaxProvider>
+      <div className="App">
+        <Router>
+          <Header/>
+          <div className="page">
+            <Switch>
+              <Route exact path="/">
+                <Splash/>
+              </Route>
+              <Route path="/home">
+                <Home />
+              </Route>
 
-            <Route path="/connection/new">
-              <NewConnection />
-            </Route>
-            <Route path="/contact/new">
-              <NewContact />
-            </Route>
+              <Route path="/connection/new">
+                <NewConnection />
+              </Route>
+              <Route path="/contact/new">
+                <NewContact />
+              </Route>
 
-            <Route path="/settings">
-              <Settings />
-            </Route>
+              <Route path="/settings">
+                <Settings />
+              </Route>
 
-            <Route path="/login">
-              <Login />
-            </Route>
-            <Route path="/signup">
-              <Signup />
-            </Route>
-          </Switch>
-        </div>
-      </Router>   
-    </div>
-    
+              <Route path="/login">
+                <Login />
+              </Route>
+              <Route path="/signup">
+                <Signup />
+              </Route>
+            </Switch>
+          </div>
+        </Router>   
+      </div>
+    </ParallaxProvider>
   );
 }
 
