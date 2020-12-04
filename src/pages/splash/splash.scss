@@ -16,9 +16,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 30vh;
-        grid-gap: 50px;
+        grid-gap: 100px;
         align-items: center;
-        min-height: 50vh;
         width: 100vw;
         margin-top: -100px;
         padding: 200px 10%;
@@ -26,10 +25,34 @@
         background-color: rgba(237,144,177,0.2);
     }
     &-splash{
+        min-height: 100vh;
         .image-panel{
+            display: grid;
+            align-items: center;
             height: 50vh;
+            background-image: url('../../images/splash_bg.svg');
+            svg{
+                height: auto 100% ;
+                .circle{
+                    /* transform-box: fill-box;
+                    transform-origin: center; */
+                    /*  */
+                    animation-duration: 5s;
+                    animation-timing-function:ease-in-out ;
+                    animation-fill-mode: backwards;
+                }
+                .char_left{
+                    transform-origin: 50% 45%;
+                    animation-name: left-zoomIn;
+                    animation-duration: 5s;
+                    animation-timing-function:ease-in-out ;
+                    animation-fill-mode: backwards;
+                    
+                }
+            }
+            /* 
             background-image: url('../../images/spslas-splash_bg.svg');
-            background-position: center;
+            background-position: center; */
         }
     }
     &-two{
@@ -67,6 +90,8 @@
         background-position: center ;
     }
     .content-panel{
+        display: grid;
+        align-items: center;
         .content{
             width: 80%;
             text-align: center;
@@ -76,3 +101,20 @@
         }
     }
 }
+
+@keyframes circle-rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(310deg);
+    }
+}
+/* @keyframes left-zoomIn{
+    0%{
+        transform: rotate(-50deg);
+    }
+    100%{
+        transform: rotate(310deg);
+    }
+} */

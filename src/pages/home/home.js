@@ -8,17 +8,17 @@ export default class home extends Component {
                 <section>
                     <div className="section-head">Contacts</div>
                     <div className="contacts">
-                        <ContactCompact/>
-                        <ContactCompact/>
-                        <ContactCompact/>
-                        <ContactCompact/>
-                        <ContactCompact/>
-                        <ContactCompact/>
-                        <ContactCompact/>
-                        <ContactCompact/>
-                        <ContactCompact/>
-                        <ContactCompact/>
-                        <ContactCompact/>
+                        <ContactCompact contactId={"1231"}/>
+                        <ContactCompact contactId={"1232"}/>
+                        <ContactCompact contactId={"1233"}/>
+                        <ContactCompact contactId={"1234"}/>
+                        <ContactCompact contactId={"1235"}/>
+                        <ContactCompact contactId={"1236"}/>
+                        <ContactCompact contactId={"1237"}/>
+                        <ContactCompact contactId={"1238"}/>
+                        <ContactCompact contactId={"1239"}/>
+                        <ContactCompact contactId={"1240"}/>
+                        <ContactCompact contactId={"1241"}/>
                     </div>
                 </section>
                 <section>

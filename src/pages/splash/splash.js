@@ -1,11 +1,17 @@
 import React, { Component } from 'react'
+import { Parallax } from 'react-scroll-parallax';
+
 import './splash.scss'
 export default class splash extends Component {
     render() {
         return (
             <div class="splash">
                 <div class="splash-splash splash-grid lb-tr">
-                    <div className="image-panel"></div>
+                    <div className="image-panel">
+                    <Parallax className="custom-class" y={[50, -50]} tagOuter="figure">
+                    
+                    </Parallax>
+                    </div>
                     <div class="content-panel">
                         <div class="ontentc-EyKzVo">
                             <div class="lorem-ipsu--the-1500s font-class-1">
@@ -37,11 +43,15 @@ export default class splash extends Component {
                         </div>
                         
                     </div>
-                    <div className="image-panel"></div>
+                    <Parallax className="custom-class" y={[100, -50]} tagOuter="figure">
+                        <div className="image-panel"></div>
+                    </Parallax>
                 </div>
 
                 <div class="splash-three splash-grid lb-tr">
-                    <div className="image-panel"></div>
+                    <Parallax className="custom-class" y={[100, -50]} tagOuter="figure">
+                        <div className="image-panel"></div>
+                    </Parallax>
                         <div class="content-panel">
                         <h2 class="heading">Losing Friends while you are away?</h2>
                         <div class="content">
