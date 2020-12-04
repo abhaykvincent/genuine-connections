@@ -29,7 +29,8 @@ export default class home extends Component {
                     </div>
                 </section>
                 <section>
-                    <div className="section-head">Graph</div>
+                    <div className="section-head">Timeline</div>
+                    <div className="timeline"></div>
                 </section>
                 <section>
                     <div className="section-head">NOTIFICATION</div>

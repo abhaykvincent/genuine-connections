@@ -26,6 +26,7 @@ $color-primary: rgba(245, 0, 87,1);
             width: 40px;
             &.hide{
                 .menu-block{
+                    display: none;
                     transform: translateX(0%);
                     opacity: 0;
                     background-color: rgba(0, 0, 0, 0.4);
