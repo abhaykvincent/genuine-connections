@@ -46,6 +46,10 @@ export default class login extends Component {
                         <h1 className="title">Signup</h1>
                         <div className="inputs">
                             <div className="input">
+                                <div className="label">Name</div>
+                                <input type="text"/>
+                            </div>
+                            <div className="input">
                                 <div className="label">Username</div>
                                 <input type="text"/>
                             </div>
@@ -53,10 +57,15 @@ export default class login extends Component {
                                 <div className="label">Password</div>
                                 <input type="text"/>
                             </div>
-                            <div className="button login-button">Login</div>
+                            <div className="input">
+                                <div className="label">Email</div>
+                                <input type="text"/>
+                            </div>
+
+                        <div className="login-redirect " onClick={this.switchToLogin}>Login</div>
+                            <div className="button login-button">Signup</div>
                         </div>
                         
-                        <div className="login-redirect " onClick={this.switchToLogin}>Login</div>
                     </div>
                 </div>
                 <div className="image-panel signup-image">SIGNUP</div>
