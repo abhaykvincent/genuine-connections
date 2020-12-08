@@ -15,6 +15,9 @@ import Header from './component/header/header'
 
 import Splash from './pages/splash/splash'
 import Home from './pages/home/home'
+
+import NewContact from './pages/newContact/newContact'
+
 import Login from './pages/login/login'
 import Signup from './pages/signup/signup'
 
@@ -23,7 +26,6 @@ export default function App() {
     <ParallaxProvider>
       <div className="App">
         <Router>
-          <Header/>
           <div className="page">
             <Switch>
               <Route exact path="/">
@@ -44,13 +46,17 @@ export default function App() {
                 <Settings />
               </Route>
 
-              <Route path="/login">
-                <Login />
-              </Route>
               <Route path="/signup">
                 <Signup />
               </Route>
+
+              <Route path="/login">
+                <Login />
+              </Route>
             </Switch>
+            
+          
+            <Header/>
           </div>
         </Router>   
       </div>
@@ -96,10 +102,6 @@ function Topic() {
   return <h3>Requested topic ID: {topicId}</h3>;
 }
 
-function NewContact() {
-  let { topicId } = useParams();
-  return <h3>Requested topic ID: {topicId}</h3>;
-}
 function NewConnection() {
   let { topicId } = useParams();
   return <h3>Requested topic ID: {topicId}</h3>;

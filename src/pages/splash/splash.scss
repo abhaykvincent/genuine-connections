@@ -6,6 +6,11 @@
         .content{
             float: right;
         }
+        &.second-section{
+            .content-panel{
+                text-align: left;
+            }
+        }
         
     }
     .lb-tr{
@@ -94,7 +99,11 @@
         align-items: center;
         .content{
             width: 80%;
+            margin: 40px 0px;
             text-align: center;
+            .heading{
+                margin-bottom: 10px;
+            }
             .list{
                 margin-top: 20px;
             }
