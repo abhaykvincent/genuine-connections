@@ -62,7 +62,7 @@ export default class splash extends Component {
                     </div>
                     
                 </div>
-                <div class="splash-cta tl-rb">
+                <div class="splash-cta tl-rb second-section">
                     <div className="image-panel"></div>
                     <div className="content-panel">
                         <div class="content">
