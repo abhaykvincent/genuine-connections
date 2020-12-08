@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
+import { withRouter } from "react-router-dom";
 import '../../pages/login/login.scss'
 
-export default class login extends Component {
+class signup extends Component {
     constructor(props) {
         super(props);
         this.state = {
             page: 'signup'
         };
+        
     
         // This binding is necessary to make `this` work in the callback
         this.switchToLogin = this.switchToLogin.bind(this);
@@ -16,11 +18,17 @@ export default class login extends Component {
         this.setState(state => ({
             page: 'login'
         }));
+        setTimeout(()=>{
+            this.props.history.push("/login");
+        }, 500)
     }
     switchToSignup() {
         this.setState(state => ({
             page: 'signup'
         }));
+        setTimeout(()=>{
+            this.props.history.push("/signup");
+        }, 500)
     }
     render() {
         return (
@@ -73,3 +81,4 @@ export default class login extends Component {
         )
     }
 }
+export default withRouter(signup);
