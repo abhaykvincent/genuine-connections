@@ -27,8 +27,37 @@ export default class login extends Component {
             <div className={'login-signup ' + this.state.page}>
                 <div className="image-panel login-image">LOGIN</div>
                 <div className="forms">
-                    <div className="signup-redirect form" onClick={this.switchToSignup}>Signup</div>
-                    <div className="login-redirect form" onClick={this.switchToLogin}>Login</div>
+                    <div className="form login-form">
+                        <h1 className="title">Login</h1>
+                        <div className="inputs">
+                            <div className="input">
+                                <div className="label">Username</div>
+                                <input type="text"/>
+                            </div>
+                            <div className="input">
+                                <div className="label">Password</div>
+                                <input type="text"/>
+                            </div>
+                        </div>
+                        <div className="signup-redirect " onClick={this.switchToSignup}>Create a new account</div>
+                        <div className="button login-button">Login</div>
+                    </div>
+                    <div className="form">
+                        <h1 className="title">Signup</h1>
+                        <div className="inputs">
+                            <div className="input">
+                                <div className="label">Username</div>
+                                <input type="text"/>
+                            </div>
+                            <div className="input">
+                                <div className="label">Password</div>
+                                <input type="text"/>
+                            </div>
+                            <div className="button login-button">Login</div>
+                        </div>
+                        
+                        <div className="login-redirect " onClick={this.switchToLogin}>Login</div>
+                    </div>
                 </div>
                 <div className="image-panel signup-image">SIGNUP</div>
             </div>
