@@ -1,4 +1,125 @@
+$color-primary: rgba(245, 0, 87,1);
+$color-primary-dark: rgb(219, 7, 42);
+$color-primary-light: rgba(219, 7, 42, 0.1);
 .settings{
     display: grid;
+    min-height: calc(100vh - 100px);
     grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    padding: 0px 50px;
+    align-content: start;
+    font-size: 1.5rem;
+    .left-panel{
+        .title-settings{
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            color: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid #000;
+        }
+        .setting-option{
+            padding: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+            border-radius: 10px;
+            &:hover{
+                color: $color-primary-dark;
+                background-color: $color-primary-light;
+            }
+        }
+    }
+    .right-panel{
+        display: grid;
+        align-content: center;
+        .settings-splash{
+            .image{
+            height: 300px;
+            background-image: url('../../images/settings.svg');
+            background-size: auto 100% ;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation-name: option-control-up;
+            animation-delay: 0s;
+            animation-duration: 0.5s;
+        }
+        }
+        .option-control{
+            transition-duration: 1s;
+            .title{
+                text-align: center;
+
+            animation-name: option-control-up;
+            animation-delay: 0.1s;
+            animation-duration: 0.5s;
+            }
+            .image{
+                height: 30vh;
+                background: url(../../images/growth-analysis.svg);
+                background-size: 100% 100%;
+                margin-bottom: 4rem;
+                display: grid;
+                justify-content: center;
+                animation-name: option-control-up;
+                animation-delay: 0.15s;
+                animation-duration: 0.5s;
+            }
+            .inputs{
+                display: grid;
+                justify-content: center;
+                margin-bottom: 20px;
+                animation-name: option-control-up;
+                animation-delay: 0.2s;
+                animation-duration: 0.5s;
+                .label{
+                    font-size: 1rem;
+                    color: rgba(0, 0, 0, 0.7);
+                    margin-bottom: 5px;
+                }
+                .input{
+                    margin-bottom: 8px;
+                    width: 20vw;
+                    input{
+                        width: 100%;
+                        height: 2rem;
+                        border:1px solid rgba(0, 0, 0, 0.1);
+                        border-radius: 5px;
+                    }
+                    .message{
+                        margin-top: 10px;
+                        font-size: 0.7rem;
+                        font-weight: normal;
+                        color: rgb(185, 34, 34);
+                    }
+                }
+            }
+            .submit{
+                display: grid;
+                justify-content: center;
+                margin-top: 30px;
+                animation-name: option-control-up;
+                animation-delay: 0.25s;
+                animation-duration: 0.5s;
+                .change-name-submit{
+                    font-size: 1.1rem;
+                    display: inline;
+                    padding: 10px 20px;
+                    background-color: $color-primary;
+                    color: white;
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes option-control-up{
+    0%{
+        opacity: 0;
+        transform: translateY(200px);
+        
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
 }

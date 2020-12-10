@@ -14,7 +14,7 @@ function Settings() {
     return (
         <div className="settings">
             <div className="left-panel">
-                <div className="title-settings">Settings</div>
+                <div className="title-settings"><h3>Settings</h3></div>
                 <div>
                     <Link to={`${match.url}/change/name`}>
                         <div className="setting-option">Change Name</div>
@@ -28,7 +28,7 @@ function Settings() {
                     <Link to={`${match.url}/change/email`}>
                         <div className="setting-option">Change Email</div>
                     </Link>
-                    <Link to={`${match.url}/`}>
+                    <Link to={`/`}>
                         <div className="setting-option">Signout</div>
                     </Link>
                     <Link to={`${match.url}/props-v-state`}>
@@ -52,7 +52,10 @@ function Settings() {
                 </Route>
 
                 <Route path={match.path}>
-                    <h3>Please select a topic.</h3>
+                    <div className="settings-splash">
+                        <div className="image option-control"></div>
+                    </div>
+                    
                 </Route>
                 </Switch>
             </div>
@@ -75,8 +78,17 @@ function Topic() {
 function ChangeName() {
     return (
         <div className="option-control">
-            <h3>Change name</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi saepe quia libero corrupti cumque praesentium doloribus ipsam eveniet quos quis porro, quaerat perferendis accusamus accusantium labore sunt sit in error. Quo, totam!</p>
+            <div className="title"><h3>Change name</h3></div>
+            <div className="image"></div>
+            <div className="inputs">
+                <div className="input">
+                    <div className="label">Name</div>
+                    <input type="text"/>
+                </div>
+            </div>
+            <div className="submit">
+                <div className="change-name-submit">Change Names</div>
+            </div>
         </div>
         
     )
@@ -84,8 +96,20 @@ function ChangeName() {
 function ChangeUsername() {
     return (
         <div className="option-control">
-            <h3>Change Username</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi saepe quia libero corrupti cumque praesentium doloribus ipsam eveniet quos quis porro, quaerat perferendis accusamus accusantium labore sunt sit in error. Quo, totam!</p>
+            <div className="title"><h3>Change Username</h3></div>
+            <div className="image"></div>
+            <div className="inputs">
+                <div className="input">
+                    <div className="label">Username</div>
+                    <input type="text"/>
+                    <div className="message">
+                        <p>Username exists</p>
+                    </div>
+                </div>
+            </div>
+            <div className="submit">
+                <div className="change-name-submit">Change Username</div>
+            </div>
         </div>
         
     )
@@ -93,8 +117,24 @@ function ChangeUsername() {
 function ChangePassword() {
     return (
         <div className="option-control">
-            <h3>Change Password</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi saepe quia libero corrupti cumque praesentium doloribus ipsam eveniet quos quis porro, quaerat perferendis accusamus accusantium labore sunt sit in error. Quo, totam!</p>
+            <div className="title"><h3>Change Password</h3></div>
+            <div className="image"></div>
+            <div className="inputs">
+                <div className="input">
+                    <div className="label">CURRENT Password</div>
+                    <input type="text"/>
+                </div>
+                <div className="input">
+                    <div className="label">New Password</div>
+                    <input type="text"/>
+                    <div className="message">
+                        <p>Use different password</p>
+                    </div>
+                </div>
+            </div>
+            <div className="submit">
+                <div className="change-name-submit">Change Password</div>
+            </div>
         </div>
         
     )
@@ -102,8 +142,20 @@ function ChangePassword() {
 function ChangeEmail() {
     return (
         <div className="option-control">
-            <h3>Change Email</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi saepe quia libero corrupti cumque praesentium doloribus ipsam eveniet quos quis porro, quaerat perferendis accusamus accusantium labore sunt sit in error. Quo, totam!</p>
+            <div className="title"><h3>Change Email</h3></div>
+            <div className="image"></div>
+            <div className="inputs">
+                <div className="input">
+                    <div className="label">Email</div>
+                    <input type="text"/>
+                    <div className="message">
+                        <p>Email already in use</p>
+                    </div>
+                </div>
+            </div>
+            <div className="submit">
+                <div className="change-name-submit">Change Email</div>
+            </div>
         </div>
         
     )
