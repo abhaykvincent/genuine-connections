@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import {Link} from "react-router-dom";
+
 import ContactCompact from '../../component/contacts/contact-compact'
 import './home.scss'
 export default class home extends Component {
@@ -24,8 +26,11 @@ export default class home extends Component {
                 <section>
                     <div className="section-head">ADD</div>
                     <div className="tools">
-                        <div className="tool"></div>
-                        <div className="tool"></div>
+                        <div className="tool new-contact-button"></div>
+                        <div className="tool record-connections">
+                        <Link to="/contact/new"><div className="record">Record Connection</div></Link>
+                            
+                        </div>
                     </div>
                 </section>
                 <section>

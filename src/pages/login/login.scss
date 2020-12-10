@@ -3,7 +3,7 @@
     height: calc(100vh  - 100px);
     grid-template-columns: 50vw auto 50vw;
     transition-duration: 0.8s;
-    transform: translateY(-200px);
+    transform: translateY(-100px);
     .image-panel{
         background-image: url('../../images/online-friends.svg');
         background-size: 60%;
@@ -21,8 +21,8 @@
         display: grid;
         grid-template-columns:1fr 1fr;
         background-color: #f52d56;
-        height: 100vw;
-        width: 100vw;
+        height: maxmin(100vw,100vh);
+        width: maxmin(100vw,100vh);;
         border-radius: 50%;
         .title{
             margin-bottom: 40px;

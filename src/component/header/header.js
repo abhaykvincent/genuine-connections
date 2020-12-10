@@ -26,11 +26,13 @@ export default class header extends Component {
     render() {
         return (
             <div className="header">
-                <div className="home-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="518" height="68" viewBox="0 0 518 68">
-                        <text id="Genuine_Connection" data-name="Genuine Connection" transform="translate(259 54)" fill="rgba(64,64,64,0.63)" font-size="56" font-family="ProductSans-Bold, Product Sans" font-weight="700"><tspan x="-258.356" y="0">Genuine</tspan><tspan y="0" fill="rgba(78,0,27,0.63)" letter-spacing="-0.299em"> </tspan><tspan y="0" fill="rgba(78,0,27,0.63)">Connection</tspan></text>
-                    </svg>
-                </div>
+                <Link to="/">
+                    <div className="home-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="518" height="68" viewBox="0 0 518 68">
+                            <text id="Genuine_Connection" data-name="Genuine Connection" transform="translate(259 54)" fill="rgba(64,64,64,0.63)" font-size="56" font-family="ProductSans-Bold, Product Sans" font-weight="700"><tspan x="-258.356" y="0">Genuine</tspan><tspan y="0" fill="rgba(78,0,27,0.63)" letter-spacing="-0.299em"> </tspan><tspan y="0" fill="rgba(78,0,27,0.63)">Connection</tspan></text>
+                        </svg>
+                    </div>
+                </Link>
                 <div className=""></div>
                 <div className="panel">
                     <div className="hamburger hide">
