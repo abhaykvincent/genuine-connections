@@ -4,7 +4,7 @@ $color-primary-light: rgba(219, 7, 42, 0.1);
 .settings{
     display: grid;
     min-height: calc(100vh - 100px);
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 5fr;
     grid-gap: 50px;
     padding: 0px 50px;
     align-content: start;
@@ -18,6 +18,7 @@ $color-primary-light: rgba(219, 7, 42, 0.1);
         }
         .setting-option{
             padding: 10px;
+            font-size: 1.2rem;
             border: 1px solid rgba(0, 0, 0, 0.2);
             margin-bottom: 10px;
             border-radius: 10px;
@@ -56,6 +57,7 @@ $color-primary-light: rgba(219, 7, 42, 0.1);
                 background: url(../../images/growth-analysis.svg);
                 background-size: 100% 100%;
                 margin-bottom: 4rem;
+                margin-top: 2rem;
                 display: grid;
                 justify-content: center;
                 animation-name: option-control-up;
@@ -108,18 +110,59 @@ $color-primary-light: rgba(219, 7, 42, 0.1);
                 }
             }
         }
+        .change-name{
+            .image{
+                background-image: url('../../images/settings-name.svg');
+            }
+        }
+        .change-username{
+            .image{
+                background-image: url('../../images/settings-username.svg');
+            }
+        }
+        .change-password{
+            .image{
+                background-image: url('../../images/settings-password.svg');
+                animation-name: settings-image-swipe;
+                animation-duration:10s ;
+                animation-iteration-count: 20;
+            }
+        }
+        .change-email{
+            .image{
+                background-image: url('../../images/settings-email.svg');
+            }
+        }
     }
 }
 
 @keyframes option-control-up{
     0%{
         opacity: 0;
-        transform: translateY(200px);
+        transform: translate(500px,200px);
         
     }
     100%{
         opacity: 1;
-        transform: translateY(0px);
+        transform: translate(0px);
 
+    }
+}
+@keyframes settings-image-swipe{
+    0%{
+        background-size: auto 100% ;
+        background-position-x:0px ;
+    }
+    30%{
+        background-size: auto 120%;
+        background-position-x:200px ;
+    }
+    60%{
+        background-size: auto 110%;
+        background-position-x:500px ;
+    }
+    100%{
+        background-size:  auto 100%;
+        background-position-x:0px ;
     }
 }

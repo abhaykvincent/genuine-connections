@@ -63,8 +63,12 @@ export default class splash extends Component {
                     
                 </div>
                 <div class="splash-cta tl-rb second-section">
-                    <div className="image-panel"></div>
-                    <div className="content-panel">
+                    <Parallax className="custom-class" y={[100, -100]} tagOuter="figure">
+                        <div className="image-panel"></div>
+                    </Parallax>
+
+                    
+                        <div className="content-panel">
                         <div class="content">
                             <h2 class="heading">Record and Analyze your Connections now</h2>
                             <div class="list">

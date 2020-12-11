@@ -53,7 +53,7 @@ function Settings() {
 
                 <Route path={match.path}>
                     <div className="settings-splash">
-                        <div className="image option-control"></div>
+                        <div className="image"></div>
                     </div>
                     
                 </Route>
@@ -77,7 +77,7 @@ function Topic() {
 }
 function ChangeName() {
     return (
-        <div className="option-control">
+        <div className="option-control change-name">
             <div className="title"><h3>Change name</h3></div>
             <div className="image"></div>
             <div className="inputs">
@@ -95,7 +95,7 @@ function ChangeName() {
 }
 function ChangeUsername() {
     return (
-        <div className="option-control">
+        <div className="option-control change-username">
             <div className="title"><h3>Change Username</h3></div>
             <div className="image"></div>
             <div className="inputs">
@@ -116,7 +116,7 @@ function ChangeUsername() {
 }
 function ChangePassword() {
     return (
-        <div className="option-control">
+        <div className="option-control change-password">
             <div className="title"><h3>Change Password</h3></div>
             <div className="image"></div>
             <div className="inputs">
@@ -141,7 +141,7 @@ function ChangePassword() {
 }
 function ChangeEmail() {
     return (
-        <div className="option-control">
+        <div className="option-control change-email">
             <div className="title"><h3>Change Email</h3></div>
             <div className="image"></div>
             <div className="inputs">
