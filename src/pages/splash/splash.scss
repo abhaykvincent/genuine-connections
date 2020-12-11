@@ -2,7 +2,6 @@
     .tl-rb{
         clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 81%);
         background-color: rgba(237,144,177,0.3);
-        text-align: right;
         .content{
             float: right;
         }
@@ -77,12 +76,15 @@
         padding: 200px 20%;
         margin-top: -100px;
         text-align: center;
-        .image-panel{
-            height: 20vmax;
+        svg{
+            height: 40vmin;
             margin-bottom: 20px;
-            background-image: url('../../images/growth-analysis.svg');
-            background-position: center center;
-            background-size:auto 100% !important;
+            .circles{
+                circle{
+                    /* animation-name: cta-svg-circle;
+                    animation-duration: 3s; */
+                }
+            }
         }
         .content{
             width: 100% !important;
@@ -112,6 +114,14 @@
 }
 
 @keyframes circle-rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(310deg);
+    }
+}
+@keyframes cta-svg-circle{
     0%{
         transform: rotate(0deg);
     }
