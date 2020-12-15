@@ -1,26 +1,37 @@
 import React, { Component } from 'react'
 import {Link} from "react-router-dom";
+import axios from "axios";
 
 import ContactCompact from '../../component/contacts/contact-compact'
 import './home.scss'
 export default class home extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { 
+            contacts: [] };
+      }
+    
+      componentDidMount(){
+            axios.get('https://us-central1-genuine-connections-a4e91.cloudfunctions.net/api/contacts')
+            .then(res => {
+                this.contacts=res.data;
+                this.setState({contacts: this.contacts});
+            })
+            console.log(this.state)
+
+            
+      }
     render() {
+        let contacts=this.state.contacts;
+        const listContacts = contacts.map((contact) =>
+            <ContactCompact contactId={"1231"} contactName={contact.name}/>
+            );
         return (
             <div className="home">
-                <section>
+                <section className="contact-section">
                     <div className="section-head">Contacts</div>
                     <div className="contacts">
-                        <ContactCompact contactId={"1231"}/>
-                        <ContactCompact contactId={"1232"}/>
-                        <ContactCompact contactId={"1233"}/>
-                        <ContactCompact contactId={"1234"}/>
-                        <ContactCompact contactId={"1235"}/>
-                        <ContactCompact contactId={"1236"}/>
-                        <ContactCompact contactId={"1237"}/>
-                        <ContactCompact contactId={"1238"}/>
-                        <ContactCompact contactId={"1239"}/>
-                        <ContactCompact contactId={"1240"}/>
-                        <ContactCompact contactId={"1241"}/>
+                        {listContacts}
                     </div>
                 </section>
                 <section>

@@ -26,7 +26,7 @@ export default class ContactCompact extends Component {
         return (
             <div className="contact" data-contactId={this.props.contactId}>
                 <div className="contact-profile"></div>
-                <div className="contact-name">Abhay Vincent</div>
+                <div className="contact-name">{this.props.contactName}</div>
                 <div className="contact-option" onClick={this.optionClick}>
                     <div className="option-icon"></div>
                     <div className="option-list">{this.props.contactId}

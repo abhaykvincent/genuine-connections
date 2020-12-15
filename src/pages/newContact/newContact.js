@@ -6,8 +6,6 @@ export default class newContact extends Component {
             <div className="new-contact">
                 <div class="new-connection">
                     <div class="left">
-                        
-                        <img class="undrawpizz-haringwxop" src="" />
                     </div>
                     <div class="right">
                         <h2 className="heading">Create new Contact</h2>

@@ -113,6 +113,28 @@
     }
 }
 
+
+
+@media screen and (max-width: 425px) {
+    .splash-grid{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 50vmin 50vh;
+        grid-gap: 0px;
+        width: 100vw;
+        margin-top: -100px;
+        padding: 10px 10%;
+    }
+    .image-panel{
+        display: grid;
+        align-items: center;
+        height: 50vmin  !important;
+        background-image: url('../../images/splash_bg.svg');
+    }
+}
+
+
+
 @keyframes circle-rotate{
     0%{
         transform: rotate(0deg);

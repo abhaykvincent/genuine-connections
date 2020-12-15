@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
     Link,
-    useRouteMatch,
-    useParams
+    useRouteMatch
 } from "react-router-dom";
 import './settings.scss'
 
@@ -65,7 +63,7 @@ function Settings() {
 
 export default Settings;
 
-function Topic() {
+/* function Topic() {
     let { topicId } = useParams();
     return (
         <div className="option-control">
@@ -74,7 +72,7 @@ function Topic() {
         </div>
         
     )
-}
+} */
 function ChangeName() {
     return (
         <div className="option-control change-name">
