@@ -10,6 +10,7 @@ $color-primary-light: rgba(219, 7, 42, 0.1);
     align-content: start;
     font-size: 1.5rem;
     .left-panel{
+        min-height: calc(100vh - 100px);
         .title-settings{
             margin-bottom: 30px;
             padding-bottom: 10px;
@@ -30,6 +31,7 @@ $color-primary-light: rgba(219, 7, 42, 0.1);
     }
     .right-panel{
         display: grid;
+        min-height: calc(100vh - 100px);
         align-content: center;
         .settings-splash{
             .image{
@@ -45,6 +47,9 @@ $color-primary-light: rgba(219, 7, 42, 0.1);
         }
         .option-control{
             transition-duration: 1s;
+            animation-name: option-control-up;
+            animation-delay: 0.1s;
+            animation-duration: 0.5s;
             .title{
                 text-align: center;
 
@@ -113,28 +118,67 @@ $color-primary-light: rgba(219, 7, 42, 0.1);
         .change-name{
             .image{
                 background-image: url('../../images/settings-name.svg');
+                background-size: auto 70% ;
+                background-repeat: repeat-x;
+                animation-name: settings-image-swipe;
+                animation-duration:10s ;
+                animation-delay:1s ;
+                animation-iteration-count: 20;
             }
         }
         .change-username{
             .image{
                 background-image: url('../../images/settings-username.svg');
+                background-size: auto 70% ;
+                background-repeat: repeat-x;
+                animation-name: settings-image-swipe;
+                animation-duration:10s ;
+                animation-delay:1s ;
+                animation-iteration-count: 20;
             }
         }
         .change-password{
             .image{
                 background-image: url('../../images/settings-password.svg');
+                background-size: auto 70% ;
+                background-repeat: repeat-x;
                 animation-name: settings-image-swipe;
                 animation-duration:10s ;
+                animation-delay:1s ;
                 animation-iteration-count: 20;
             }
         }
         .change-email{
             .image{
                 background-image: url('../../images/settings-email.svg');
+                background-size: auto 70% ;
+                background-repeat: repeat-x;
+                animation-name: settings-image-swipe;
+                animation-duration:10s ;
+                animation-delay:1s ;
+                animation-iteration-count: 20;
             }
         }
     }
 }
+
+
+
+@media screen and (max-width: 768px) {
+    
+    .settings{
+        display: block;
+      }
+
+    .inputs{
+        justify-content: stretch !important;
+        .input{
+            width: 100% !important;
+        }   
+    }
+}
+
+
 
 @keyframes option-control-up{
     0%{
@@ -150,7 +194,7 @@ $color-primary-light: rgba(219, 7, 42, 0.1);
 }
 @keyframes settings-image-swipe{
     0%{
-        background-size: auto 100% ;
+        background-size: auto 70% ;
         background-position-x:0px ;
     }
     30%{
@@ -162,7 +206,7 @@ $color-primary-light: rgba(219, 7, 42, 0.1);
         background-position-x:500px ;
     }
     100%{
-        background-size:  auto 100%;
+        background-size:  auto 70%;
         background-position-x:0px ;
     }
 }

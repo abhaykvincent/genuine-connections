@@ -1,14 +1,14 @@
 $color-primary: rgba(245, 0, 87,1);
 .home{
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: repeat(10,50PX);
     grid-template-areas:    "CONNECTION  ADD"
                             "CONNECTION  ADD"
                             "CONNECTION  NOTIF"
                             "CONNECTION  NOTIF"
-                            "CONNECTION  NOTIF"
-                            "CONNECTION  AWARD"
+                            "GRAPH  NOTIF"
+                            "GRAPH  NOTIF"
                             "GRAPH  AWARD"
                             "GRAPH  AWARD"
                             "GRAPH  AWARD"
@@ -41,36 +41,49 @@ $color-primary: rgba(245, 0, 87,1);
             font-size: 1.2rem;
         }
     }
-    .contacts{
-        .contact{
-            display: grid;
-            grid-template-columns: 50px auto 40px;
-            background-color: rgb(255, 255, 255);
-            width: 100%;
-            padding: 5px 0px;
-            height: 40px;
-            margin-bottom: 10px;
-            align-content: center;
-            &-profile{
-                height: 30px;
-                width: 30px;
-                background-color: $color-primary;
-                border-radius: 50%;
-                margin: 0px 10px;
-            }
-            &-name{
+    .contact-section{
+
+        .contacts{
+            .contact{
                 display: grid;
+                grid-template-columns: 50px auto 40px;
+                background-color: rgb(255, 255, 255);
+                width: 100%;
+                padding: 5px 0px;
+                height: 40px;
+                margin-bottom: 10px;
                 align-content: center;
+                &-profile{
+                    height: 30px;
+                    width: 30px;
+                    background-color: $color-primary;
+                    border-radius: 50%;
+                    margin: 0px 10px;
+                }
+                &-name{
+                    display: grid;
+                    align-content: center;
+                }
             }
         }
     }
-    .tools{
-        .tool{
-            height: 50px;
-            background-color: rgb(255, 255, 255);
-            margin-bottom: 10px;
+    section.add-section{
+        .section-head{
+            opacity: 0;
+        }
+        .tools{
+            .tool{
+                display: grid;
+                justify-content: end;
+                height: 50px;
+                margin-bottom: 10px;
+                .tool-label{
+                    padding-right: 1rem;
+                }
+            }
         }
     }
+    
     .notifications{
         .notification{
             background-color: rgb(255, 255, 255);
@@ -86,18 +99,22 @@ $color-primary: rgba(245, 0, 87,1);
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-ROWS: AUTO AUTO AUTO;
-        grid-gap: 10px;
+        grid-gap: 2rem;
+        .MuiTypography-gutterBottom{
+            margin: 0;
+        }
         .award{
-            background-color: rgb(255, 255, 255);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 10px;
-            border-radius: 5PX;
-            height: 60px;
-            &:nth-child(1){
-                height: 100px;
+            .MuiCard-root{
+                padding: 0.5rem;
             }
-            &:nth-child(2){
-                height: 100px;
+            .gutterBottom{
+                margin:0;
+            }
+            .award-winner_name{
+                margin-TOP: 5rem;
+            }
+            .MuiCardContent-root{
+                padding-bottom: 0;
             }
         }
     }
